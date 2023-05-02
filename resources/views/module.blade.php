@@ -1,0 +1,1 @@
+{!! $disciplinemodule->description !!}

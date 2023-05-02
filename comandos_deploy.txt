@@ -1,0 +1,66 @@
+db: eadsetbal
+user: setbal
+senha: PQVR0okq*9VPR474
+
+git clone https://github.com/DenisBuarque/setbal.git
+
+
+
+mv public_html public_html_backup
+ls -la
+ln -s setbal/public public_html
+ls -la
+
+cd setbal
+
+composer
+wget https://getcomposer.org/download/latest-stable/composer.phar
+ls -la
+chmod +x composer.phar
+ls -la
+rm -rf installer
+ls -la
+php composer.phar installer
+ls -la
+
+.. instalação do adminlte e outros...
+
+mv .env.example .env
+ls -la
+nano .env
+
+php artisan key:generate
+php artisan storage:link
+
+php artisan migrate
+
+// caso precise somente em algums sevidores
+find * -type d -exec chmod 755 {} \;
+find * -type f -exec chmod 644 {} \;
+
+
+cd ../
+chmod 755 idprev
+
+
+//comando para limpar cache laravel
+php artisan clear-compiled
+php artisan auth:clear-resets
+php artisan cache:clear
+php artisan config:clear
+php artisan event:clear
+php artisan optimize:clear
+php artisan route:clear
+php artisan view:clear
+
+//-----
+
+composer create-project laravel/laravel example-app
+
+cd example-app
+
+composer require jeroennoten/laravel-adminlte
+php artisan adminlte:install
+php artisan adminlte:install --only=main_views
+composer require laravel/ui
+
