@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Seminário Teologico Batista de Alagoas - Setbal</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider.min.js" crossorigin="anonymous" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/css/swiffy-slider.min.css" rel="stylesheet" crossorigin="anonymous">
+
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
@@ -29,9 +33,48 @@
 
     @include('partials.navbar')
 
-    <div class="">
-        <img src="/images/banner_ead.jpg" alt="image" class="w-full"/>
-    </div>
+    <section>
+
+        <div class="swiffy-slider">
+            <ul class="slider-container">
+                <li><img src="/images/banner_ead.jpg" style="width: 100%; height: auto;"></li>
+                <li><img src="/images/banner_ead.jpg" style="width: 100%; height: auto;"></li>
+                <li><img src="/images/banner_ead.jpg" style="width: 100%; height: auto;"></li>
+            </ul>
+        
+            <button type="button" class="slider-nav"></button>
+            <button type="button" class="slider-nav slider-nav-next"></button>
+        
+            <div class="slider-indicators">
+                <button class="active"></button>
+                <button></button>
+                <button></button>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-white dark:bg-gray-900">
+        <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16">
+            <h1
+                class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
+                Setbal plataforma de estudos</h1>
+            <p class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 lg:px-48 dark:text-gray-400">
+                Presencial ou a distância, conheça e participe dos nossos cursos, estamos sua disposiçõa para melhor lhe atender, clique abaixo para iniciar seus estudos.</p>
+            <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
+                <a href="/access"
+                    class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
+                    Iniciar estudos
+                    <svg aria-hidden="true" class="ml-2 -mr-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
 
     <!-- informations  -->
     <section class="grid grid-cols-1 p-2 md:p-0 md:grid-cols-3 gap-2 container my-10 m-auto">
@@ -109,7 +152,7 @@
     <section class="container mt-10 mb-20 m-auto p-3 md:p-0">
 
         <h1 class="text-center text-4xl text-blue-700">Conheça nossos cursos</h1>
-        <p class="text-center text-2xl mb-5">Presencial ou a distancia</p>
+        <p class="text-center text-2xl mb-16">Presencial ou a distancia</p>
 
         <div class="grid grid-cols-1 ms:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-5">
             @foreach ($courses as $course)
@@ -132,7 +175,7 @@
                         </div>
 
                         <p class="mb-3 font-normal text-gray-700">
-                            {!! \Illuminate\Support\Str::substr($course->description, 0, 100) !!}
+                            {!! \Illuminate\Support\Str::substr(strip_tags($course->description), 0, 120) !!}
                         </p>
                         <br />
                         <a href="{{ route('course.show', ['slug' => $course->slug]) }}"

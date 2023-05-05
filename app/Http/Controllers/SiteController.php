@@ -117,10 +117,10 @@ class SiteController extends Controller
 
         if($this->preregistration->create($data)) {
 
-            return redirect('/site')->with('success', 'Sua solicitação de matrícula foi enviada, aguarde nosso contato');
+            return redirect('/')->with('success', 'Sua solicitação de matrícula foi enviada, aguarde nosso contato');
 
         } else {
-            return redirect('/site')->with('error', 'Ocorreu uma erro ao solicitar sua matrícula!');
+            return redirect('/')->with('error', 'Ocorreu uma erro ao solicitar sua matrícula!');
         }
     }
 }

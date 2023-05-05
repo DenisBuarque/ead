@@ -2,16 +2,14 @@ db: eadsetbal
 user: setbal
 senha: PQVR0okq*9VPR474
 
-git clone https://github.com/DenisBuarque/setbal.git
-
-
+git clone https://github.com/DenisBuarque/ead.git
 
 mv public_html public_html_backup
 ls -la
-ln -s setbal/public public_html
+ln -s ead/public public_html
 ls -la
 
-cd setbal
+cd ead
 
 composer
 wget https://getcomposer.org/download/latest-stable/composer.phar
@@ -20,10 +18,18 @@ chmod +x composer.phar
 ls -la
 rm -rf installer
 ls -la
-php composer.phar installer
+php composer.phar install
 ls -la
 
-.. instalação do adminlte e outros...
+---------- outras instalações de ouver -----------
+composer require jeroennoten/laravel-adminlte
+php artisan adminlte:install
+php artisan adminlte:install --only=main_views
+composer require laravel/ui
+
+npm install flowbite
+
+---------- outras instalações de ouver -----------
 
 mv .env.example .env
 ls -la
@@ -40,10 +46,10 @@ find * -type f -exec chmod 644 {} \;
 
 
 cd ../
-chmod 755 idprev
+chmod 755 ead
 
 
-//comando para limpar cache laravel
+//comando para limpar cache laravel antes de enviar ao servidor
 php artisan clear-compiled
 php artisan auth:clear-resets
 php artisan cache:clear
@@ -63,4 +69,12 @@ composer require jeroennoten/laravel-adminlte
 php artisan adminlte:install
 php artisan adminlte:install --only=main_views
 composer require laravel/ui
+
+--------------------
+Atenção: esse erro pode aconter devido um espaço em branco no arquivo .env
+exemplo: APP_NAME=This will fail -> colocar APP_NAME="This will fail"
+
+@php artisan package:discover --ansi
+The environment file is invalid!
+Failed to parse dotenv file. Encountered unexpected whitespace at
 

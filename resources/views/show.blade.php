@@ -20,8 +20,8 @@
                 <div class="flex items-center">
                     <div
                         class="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-white sm:ring-8 shrink-0">
-                        <svg aria-hidden="true" class="w-3 h-3 text-blue-800" fill="currentColor"
-                            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <svg aria-hidden="true" class="w-3 h-3 text-blue-800" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd"
                                 d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
                                 clip-rule="evenodd"></path>
@@ -32,15 +32,16 @@
                 <div class="mt-3 sm:pr-8">
                     <h3 class="text-lg font-semibold text-gray-900">1º Passo:</h3>
                     <time class="block mb-2 text-sm font-normal leading-none text-gray-400">Informações do curso</time>
-                    <p class="text-base font-normal text-gray-500">Leia atentamente as informações na descrição do curso para que não fique dúvidas.</p>
+                    <p class="text-base font-normal text-gray-500">Leia atentamente as informações na descrição do curso
+                        para que não fique dúvidas.</p>
                 </div>
             </li>
             <li class="relative mb-6 sm:mb-0">
                 <div class="flex items-center">
                     <div
                         class="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-white sm:ring-8 shrink-0">
-                        <svg aria-hidden="true" class="w-3 h-3 text-blue-800" fill="currentColor"
-                            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <svg aria-hidden="true" class="w-3 h-3 text-blue-800" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd"
                                 d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
                                 clip-rule="evenodd"></path>
@@ -51,15 +52,16 @@
                 <div class="mt-3 sm:pr-8">
                     <h3 class="text-lg font-semibold text-gray-900">2º Passo:</h3>
                     <time class="block mb-2 text-sm font-normal leading-none text-gray-400">Cadastre-se</time>
-                    <p class="text-base font-normal text-gray-500">Preencha corretamente seus dados no formulario de solicitação de sua pré matricula.</p>
+                    <p class="text-base font-normal text-gray-500">Preencha corretamente seus dados no formulario de
+                        solicitação de sua pré matricula.</p>
                 </div>
             </li>
             <li class="relative mb-6 sm:mb-0">
                 <div class="flex items-center">
                     <div
                         class="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-white sm:ring-8 shrink-0">
-                        <svg aria-hidden="true" class="w-3 h-3 text-blue-800" fill="currentColor"
-                            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <svg aria-hidden="true" class="w-3 h-3 text-blue-800" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd"
                                 d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
                                 clip-rule="evenodd"></path>
@@ -70,7 +72,8 @@
                 <div class="mt-3 sm:pr-8">
                     <h3 class="text-lg font-semibold text-gray-900">3º Passo:</h3>
                     <time class="block mb-2 text-sm font-normal leading-none text-gray-400">Aguarde nosso contato</time>
-                    <p class="text-base font-normal text-gray-500">Apos suas solicitação de pré matricula ser enviado para nossa equipe avaliadora, aguarde nosso contato.</p>
+                    <p class="text-base font-normal text-gray-500">Apos suas solicitação de pré matricula ser enviado
+                        para nossa equipe avaliadora, aguarde nosso contato.</p>
                 </div>
             </li>
         </ol>
@@ -84,7 +87,8 @@
             <div class="flex mb-5">
 
                 @if (isset($course->image))
-                    <img class="rounded-full w-20 h-20" src="{{ asset('storage/' . $course->image) }}" alt="image description">
+                    <img class="rounded-full w-20 h-20" src="{{ asset('storage/' . $course->image) }}"
+                        alt="image description">
                 @else
                     <div class="w-20 h-20 rounded-full bg-gray-300"></div>
                 @endif
@@ -96,7 +100,7 @@
                             Presencial
                         @else
                             EAD
-                        @endif 
+                        @endif
                         / {{ $course->duration }}
                     </label>
                 </div>
@@ -122,8 +126,7 @@
                     <tbody>
                         @foreach ($course->disciplines->sortBy('year') as $discipline)
                             <tr class="bg-white border-b">
-                                <th scope="row"
-                                    class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
                                     {{ $discipline->title }}
                                 </th>
                                 <td class="px-6 py-4">
@@ -145,44 +148,43 @@
             <form method="POST" action="{{ route('course.preregistration') }}">
                 @csrf
                 @method('POST')
-                <input type="hidden" name="course_id" value="{{ $course->id }}"/>
-                <input type="hidden" name="slug" value="{{ $course->slug }}"/>
+                <input type="hidden" name="course_id" value="{{ $course->id }}" />
+                <input type="hidden" name="slug" value="{{ $course->slug }}" />
                 <div class="grid gap-6 mb-6 md:grid-cols-2">
                     <div>
-                        <label for="first_name"
-                            class="block mb-2 text-sm font-medium text-gray-900">Nome completo</label>
+                        <label for="first_name" class="block mb-2 text-sm font-medium text-gray-900">Nome
+                            completo</label>
                         <input type="text" name="name" id="first_name"
                             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-                            placeholder="John Richard Nuelly" required maxlength="100" />
+                            placeholder="Ex: John Richard Nuelly" required maxlength="100" />
                     </div>
                     <div>
-                        <label for="last_name"
-                            class="block mb-2 text-sm font-medium text-gray-900">Telefone para
+                        <label for="last_name" class="block mb-2 text-sm font-medium text-gray-900">Telefone para
                             contato</label>
                         <input type="tel" name="phone" id="phone"
                             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-                            placeholder="(82)90000-0000" required maxlength="16"/>
+                            placeholder="Ex: (82)90000-0000" required maxlength="16" />
                     </div>
                 </div>
                 <div class="mb-6">
-                    <label for="email" class="block mb-2 text-sm font-medium text-gray-900">Endereço de E-Mail</label>
-                    <input type="email"  name="email" id="email"
+                    <label for="email" class="block mb-2 text-sm font-medium text-gray-900">Endereço de
+                        E-Mail</label>
+                    <input type="email" name="email" id="email"
                         class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-                        placeholder="john.doe@company.com" required  maxlength="100"/>
+                        placeholder="Ex: john.doe@company.com" required maxlength="100" />
                 </div>
 
                 <div class="flex items-center mb-6">
-                    <input id="link-radio" type="radio" value=""
+                    <input id="checked-confirm" type="checkbox" onclick="confirmPolitics()"
                         class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2">
                     <label for="link-radio" class="ml-2 text-sm font-medium text-gray-900">Li e
-                        concordo com os <a href="#"
-                            class="text-blue-600 hover:underline">termos
-                            de serviço</a> e <a href="#"
-                            class="text-blue-600 hover:underline">politicas de privacidade</a>
+                        concordo com os <a href="#" class="text-blue-600 hover:underline">termos
+                            de serviço</a> e <a href="#" class="text-blue-600 hover:underline">politicas de
+                            privacidade</a>
                         oferecido pelo instituição.</label>
                 </div>
 
-                <button type="submit"
+                <button type="submit" id="btn-submit"
                     class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">Solicitar
                     Pré-matricula</button>
             </form>
@@ -190,19 +192,18 @@
         </div>
     </section>
 
-    
-    
     <!-- Container Courses -->
     <section class="container my-10 m-auto p-3 md:p-0">
 
         <h1 class="text-center text-4xl text-blue-700">Conheça outros cursos </h1>
-        <p class="text-center text-2xl mb-5">Presencial ou a distancia</p>
+        <p class="text-center text-2xl mb-16">Presencial ou a distancia</p>
 
         <div class="grid grid-cols-1 ms:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-5">
             @foreach ($courses as $course)
                 <div class="bg-white border border-gray-200 rounded-lg shadow">
                     <a href="#">
-                        <img class="rounded-t-lg w-full" src="{{ asset('storage/' . $course->image)}}" alt="Image" />
+                        <img class="rounded-t-lg w-full" src="{{ asset('storage/' . $course->image) }}"
+                            alt="Image" />
                     </a>
                     <div class="p-5">
                         <a href="/show">
@@ -218,10 +219,10 @@
                         </div>
 
                         <p class="mb-3 font-normal text-gray-700">
-                            {!! \Illuminate\Support\Str::substr($course->description, 0, 100) !!}
+                            {!! \Illuminate\Support\Str::substr(strip_tags($course->description), 0, 120) !!}
                         </p>
-                        <br/>
-                        <a href="{{ route('course.show',['slug' => $course->slug]) }}"
+                        <br />
+                        <a href="{{ route('course.show', ['slug' => $course->slug]) }}"
                             class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
                             Mais informações
                             <svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor"
@@ -238,6 +239,24 @@
     </section>
 
     @include('partials.footer')
+
+    <script>
+        // habilita e desabilita botão de envio formulário
+        const btn = document.getElementById('btn-submit');
+        btn.disabled = true;
+        btn.style.background = "#CCCCCC";
+
+        function confirmPolitics() {
+            let checkbox = document.getElementById('checked-confirm');
+            if (checkbox.checked) {
+                btn.disabled = false;
+                btn.style.background = "#1d4ed8";
+            } else {
+                btn.disabled = true;
+                btn.style.background = "#CCCCCC";
+            }
+        }
+    </script>
 
 </body>
 

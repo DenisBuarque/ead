@@ -1,7 +1,7 @@
 <!-- Navbar -->
 <nav class="bg-blue-800 border-gray-200 px-2 sm:px-4 py-2.5">
     <div class="container flex flex-wrap items-center justify-between mx-auto">
-        <a href="https://flowbite.com/" class="flex items-center">
+        <a href="/" class="flex items-center">
             <img src="/images/mini_logo.jpg" class="h-6 mr-3 sm:h-9" alt="Flowbite Logo" />
             <span class="self-center text-xl font-semibold whitespace-nowrap text-white">Setbal</span>
         </a>
@@ -34,7 +34,7 @@
             <ul
                 class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-blue-800 md:dark:bg-gray-900">
                 <li>
-                    <a href="/site"
+                    <a href="/"
                         class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-white md:p-0"
                         aria-current="page">Home</a>
                 </li>
